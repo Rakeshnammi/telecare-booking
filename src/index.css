@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 210 33% 98%;
+    --foreground: 215 25% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 215 25% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 215 25% 15%;
+
+    --primary: 211 84% 45%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 210 40% 94%;
+    --secondary-foreground: 211 84% 35%;
+
+    --muted: 210 30% 95%;
+    --muted-foreground: 215 15% 50%;
+
+    --accent: 170 65% 45%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 72% 55%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 210 25% 90%;
+    --input: 210 25% 90%;
+    --ring: 211 84% 45%;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+
+    /* Custom tokens */
+    --success: 152 60% 42%;
+    --success-foreground: 0 0% 100%;
+    --warning: 38 92% 55%;
+    --warning-foreground: 0 0% 100%;
+    --info: 211 84% 45%;
+    --info-foreground: 0 0% 100%;
+
+    --gradient-medical: linear-gradient(135deg, hsl(211 84% 45%), hsl(200 80% 55%));
+    --gradient-hero: linear-gradient(135deg, hsl(211 84% 45%), hsl(170 65% 45%));
+    --shadow-card: 0 1px 3px 0 hsl(211 84% 45% / 0.06), 0 1px 2px -1px hsl(211 84% 45% / 0.06);
+    --shadow-card-hover: 0 10px 25px -5px hsl(211 84% 45% / 0.12), 0 8px 10px -6px hsl(211 84% 45% / 0.08);
+
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+
+  .dark {
+    --background: 215 25% 8%;
+    --foreground: 210 40% 98%;
+    --card: 215 25% 12%;
+    --card-foreground: 210 40% 98%;
+    --popover: 215 25% 12%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 211 84% 55%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 215 25% 18%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 215 25% 18%;
+    --muted-foreground: 215 20% 65%;
+    --accent: 170 65% 45%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 215 25% 20%;
+    --input: 215 25% 20%;
+    --ring: 211 84% 55%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground antialiased;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Plus Jakarta Sans', 'Inter', system-ui, sans-serif;
+  }
+}
+
+@layer utilities {
+  .gradient-medical {
+    background: var(--gradient-medical);
+  }
+  .gradient-hero {
+    background: var(--gradient-hero);
+  }
+  .shadow-card {
+    box-shadow: var(--shadow-card);
+  }
+  .shadow-card-hover {
+    box-shadow: var(--shadow-card-hover);
+  }
+  .hover-lift {
+    @apply transition-all duration-300 ease-out;
+  }
+  .hover-lift:hover {
+    @apply -translate-y-1;
+    box-shadow: var(--shadow-card-hover);
+  }
+  .hover-scale {
+    @apply transition-transform duration-200 hover:scale-105;
+  }
+  .story-link * {
+    @apply relative inline-block after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-primary after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left;
+  }
+}
