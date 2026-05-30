@@ -24,7 +24,7 @@ export function AppHeader() {
           <div className="flex h-9 w-9 items-center justify-center rounded-lg gradient-medical">
             <Heart className="h-5 w-5 text-primary-foreground" />
           </div>
-          <span className="font-display text-lg font-bold text-foreground">MediCare</span>
+          <span className="font-display text-lg font-bold text-foreground">Tele Med Pro</span>
         </button>
 
         {/* Desktop nav */}
