@@ -43,7 +43,7 @@ export default function LoginPage() {
           <div className="flex h-14 w-14 items-center justify-center rounded-2xl gradient-medical shadow-lg">
             <Heart className="h-7 w-7 text-primary-foreground" />
           </div>
-          <h1 className="font-display text-3xl font-bold text-foreground">Tele Med Pro</h1>
+          <h1 className="font-display text-3xl font-bold text-foreground">MediCare</h1>
           <p className="text-muted-foreground">Your health, our priority</p>
         </div>
 
