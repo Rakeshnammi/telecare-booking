@@ -2,6 +2,7 @@ import { useAuth } from "@/contexts/AuthContext";
 import { useAppointments } from "@/hooks/useAppointments";
 import { AppHeader } from "@/components/AppHeader";
 import { AnimatedCard } from "@/components/AnimatedCard";
+import { ActivityHistory } from "@/components/ActivityHistory";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
