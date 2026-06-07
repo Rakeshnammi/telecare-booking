@@ -117,6 +117,12 @@ export default function PatientDashboard() {
             </CardContent>
           </Card>
         </AnimatedCard>
+
+        <div className="mt-6">
+          <AnimatedCard delay={500} hover={false}>
+            <ActivityHistory />
+          </AnimatedCard>
+        </div>
       </main>
     </div>
   );
