@@ -3,6 +3,7 @@ import { useAppointments } from "@/hooks/useAppointments";
 import { AppHeader } from "@/components/AppHeader";
 import { AnimatedCard } from "@/components/AnimatedCard";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { ActivityHistory } from "@/components/ActivityHistory";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
@@ -103,6 +104,12 @@ export default function DoctorDashboard() {
             </CardContent>
           </Card>
         </AnimatedCard>
+
+        <div className="mt-6">
+          <AnimatedCard delay={400} hover={false}>
+            <ActivityHistory />
+          </AnimatedCard>
+        </div>
       </main>
     </div>
   );
